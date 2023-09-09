@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+    <!-- Meta Tags  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Title -->
+    <title>Dasbor | LKUBS - SMK TI Bali Global Singaraja</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/icon.png" type="image/x-icon">
+
+    <!-- Vendor Cascading Style Sheets -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/metisMenu/metisMenu.css">
+    <link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/vendor/chartist/css/chartist.min.css">
+
+    <!-- Main Cascading Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <!-- Navigation Toggle Button -->
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-list"></i></button>
+            </div>
+
+            <!-- Navigation Logo -->
+            <div class="navbar-brand">
+                <img src="../assets/img/icon.png" alt="logo">
+                <span><strong>LAPORAN KEUANGAN UNIT BISNIS SISWA - SMK TI BALI GLOBAL SINGARAJA</strong></span>
+            </div>
+
+        </nav>
+
+        <!-- Left Sidebar -->
+        <div id="left-sidebar" class="sidebar">
+
+            <!-- Left Sidebar Full Width Toggle Button -->
+            <button type="button" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                <span>Tampilan Penuh</span>
+                <i class="fa fa-angle-left"></i>
+            </button>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-scroll">
+
+                <!-- Account Information -->
+                <div class="user-account">
+                    <img src="https://smktibaliglobalsingaraja.sch.id/wp-content/uploads/2021/07/ketut-widi-flip.jpg"
+                        class="img-responsive img-rounded user-photo" alt="profile picture" style="width: 50%;">
+                    <strong class="user-name">Ketut Widi Astawan</strong>
+                </div>
+
+                <!-- Sidebar Navigation -->
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu">
+                        <li class="active">
+                            <a href="#"><i class="fa fa-home"></i> <span>Dasbor</span></a>
+                        </li>
+                        <li>
+                            <a href="unit-bisnis.html"><i class="fa fa-inbox"></i> <span>Daftar Unit Bisnis</span></a>
+                        </li>
+                        <li>
+                            <a href="../signin.html">
+                                <i class="fa fa-sign-out"></i><span>Keluar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <div class="container-fluid">
+
+                <!-- Date Picker -->
+                <div class="panel-content" style="padding-bottom: 18px;">
+                    <p class="text-muted">Lihat data berdasarkan tanggal :</p>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <div class="input-daterange input-group" data-provide="datepicker">
+                            <input type="text" class="input-sm form-control" name="date-start"
+                                style="background: white; cursor: pointer;" readonly>
+                        </div>
+                        <p class="text-muted">_</p>
+                        <div class="input-daterange input-group" data-provide="datepicker">
+                            <input type="text" class="input-sm form-control" name="date-end"
+                                style="background: white; cursor: pointer;" readonly>
+                        </div>
+                        <p class="text-muted">_</p>
+                        <select class="form-control input-sm" style="width: max-content;">
+                            <option value="semua">Semua Unit</option>
+                            <option value="scratch">Scratch</option>
+                            <option value="dll">Dll</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Overview -->
+                <div class="panel-content">
+
+                    <h2 class="heading">
+                        <i class="fa fa-square"></i> Ringkasan
+                    </h2>
+
+                    <!-- Overview Charts -->
+                    <div class="row">
+
+                        <!-- Total Pemasukan -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="number-chart">
+                                <div class="mini-stat">
+                                    <div id="chart-total-pemasukan" class="inlinesparkline">
+                                        500000,350000,800000,1300000
+                                    </div>
+                                </div>
+                                <div class="number">
+                                    <span>Rp 2.950.000</span> <span>Total Pemasukan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total Pengeluaran -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="number-chart">
+                                <div class="mini-stat">
+                                    <div id="chart-total-pengeluaran" class="inlinesparkline">
+                                        60000,500000,50000,750000
+                                    </div>
+                                </div>
+                                <div class="number">
+                                    <span>Rp 1.360.000</span> <span>Total Pengeluaran</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total Pendapatan -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="number-chart">
+                                <img src="../assets/img/icon.png" alt="logo" width="44px">
+                                <div class="number">
+                                    <span>Rp 1.590.000</span> <span>Total Pendapatan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Catatan Keuangan -->
+                <div class="panel-content">
+                    <div class="row">
+
+                        <!-- Catatan Pemasukan -->
+                        <div class="col-md-6">
+
+                            <h2 class="heading">
+                                <i class="fa fa-square"></i> Catatan Pemasukan
+                            </h2>
+
+                            <!-- Data Table -->
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tanggal</th>
+                                    <th>Keterangan</th>
+                                    <th>Kuantitas</th>
+                                    <th>Nominal</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                            </table>
+
+                            <!-- Pagination -->
+                            <ul class="pagination borderless">
+                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Catatan Pengeluaran -->
+                        <div class="col-md-6">
+
+                            <h2 class="heading">
+                                <i class="fa fa-square"></i> Catatan Pengeluaran
+                            </h2>
+
+                            <!-- Data Table -->
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tanggal</th>
+                                    <th>Keterangan</th>
+                                    <th>Kuantitas</th>
+                                    <th>Nominal</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>07/09/2023</td>
+                                    <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                                    <td>1 Domain</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                            </table>
+
+                            <!-- Pagination -->
+                            <ul class="pagination borderless">
+                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="panel-content">
+                    <div class="row">
+
+                        <!-- Persentase -->
+                        <div class="col-md-6">
+                            <h2 class="heading">
+                                <i class="fa fa-square"></i> Persentase
+                            </h2>
+                            <div id="chart-persentase-keuangan" class="ct-chart"></div>
+                        </div>
+
+                        <!-- Statistik -->
+                        <div class="col-md-6">
+                            <h2 class="heading">
+                                <i class="fa fa-square"></i> Statistik
+                            </h2>
+                            <div id="chart-statistik-pengeluaran" class="ct-chart"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="clearfix"></div>
+        <footer>
+            <p class="copyright">
+                &copy; 2023.
+                <a href="https://smktibaliglobalsingaraja.sch.id/" target="_blank">SMK TI Bali Global
+                    Singaraja</a>.
+                All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/metisMenu/metisMenu.js"></script>
+    <script src="../assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../assets/vendor/jquery-sparkline/js/jquery.sparkline.min.js"></script>
+    <script src="../assets/vendor/chartist/js/chartist.min.js"></script>
+    <script src="../assets/vendor/chartist-plugin-legend-latest/chartist-plugin-legend.js"></script>
+    <script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../assets/scripts/common.js"></script>
+    <script>
+        $(function () {
+
+            // <--------- Overview Charts --------->
+            function overviewCharts() {
+                let params = {
+                    width: "50%",
+                    height: "30px",
+                    lineWidth: "2",
+                    lineColor: "#5C8ED4",
+                    fillColor: "lightblue",
+                    spotRadius: "1",
+                    spotColor: false,
+                    minSpotColor: false,
+                    maxSpotColor: false,
+                    disableInteraction: false
+                };
+                $("#chart-total-pemasukan").sparkline("html", params);
+                $("#chart-total-pengeluaran").sparkline("html", params);
+            };
+            overviewCharts();
+
+            // <--------- Data Persentase Keuangan --------->
+            var dataPersentaseKeuangan = {
+                series: [2950000, 1360000],
+            };
+            new Chartist.Pie("#chart-persentase-keuangan", dataPersentaseKeuangan, {
+                height: "200px",
+                donut: true,
+                donutWidth: 50,
+                donutSolid: true,
+                startAngle: 0,
+                showLabel: true
+            });
+
+            // <--------- Statistik Keuangan --------->
+            var dataStatistikKeuangan = {
+                series: [{
+                    name: "pemasukan",
+                    data: [500000, 350000, 800000, 1300000],
+                }, {
+                    name: "pengeluaran",
+                    data: [60000, 500000, 50000, 750000],
+                }]
+            };
+            options = {
+                lineSmooth: false,
+                height: "200px",
+                low: 0,
+                high: "auto",
+                plugins: [
+                    Chartist.plugins.legend({
+                        legendNames: ["Pemasukan", "Pengeluaran"],
+                    })
+                ]
+            };
+            new Chartist.Line("#chart-statistik-pengeluaran", dataStatistikKeuangan, options);
+        });
+    </script>
+</body>
+
+</html>
