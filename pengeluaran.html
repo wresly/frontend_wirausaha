@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+    <!-- Meta Tags  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Title -->
+    <title>Master Data Pengeluaran | LKUBS - SMK TI Bali Global Singaraja</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+
+    <!-- Vendor Cascading Style Sheets -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/metisMenu/metisMenu.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- Main Cascading Style Sheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <!-- Navigation Toggle Button -->
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-list"></i></button>
+            </div>
+
+            <!-- Navigation Logo -->
+            <div class="navbar-brand">
+                <img src="assets/img/icon.png" alt="logo">
+                <span><strong>LAPORAN KEUANGAN UNIT BISNIS SISWA - SMK TI BALI GLOBAL SINGARAJA</strong></span>
+            </div>
+
+        </nav>
+
+        <!-- Left Sidebar -->
+        <div id="left-sidebar" class="sidebar">
+
+            <!-- Left Sidebar Full Width Toggle Button -->
+            <button type="button" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                <span>Tampilan Penuh</span>
+                <i class="fa fa-angle-left"></i>
+            </button>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-scroll">
+
+                <!-- Account Information -->
+                <div class="user-account">
+                    <img src="https://smktibaliglobalsingaraja.sch.id/wp-content/uploads/2021/07/ketut-widi-flip.jpg"
+                        class="img-responsive img-rounded user-photo" alt="profile picture" style="width: 50%;">
+                    <strong class="user-name">Ketut Widi Astawan</strong>
+                </div>
+
+                <!-- Sidebar Navigation -->
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-home"></i> <span>Dasbor</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="has-arrow" aria-expanded="false">
+                                <i class="fa fa-database"></i> <span>Master Data</span>
+                            </a>
+                            <ul aria-expanded="true">
+                                <li>
+                                    <a href="unit-bisnis.html">
+                                        <i class="fa fa-inbox"></i><span>Unit Bisnis</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pemasukan.html">
+                                        <i class="fa fa-inbox"></i><span>Pemasukan</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-inbox"></i><span>Pengeluaran</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signin.html">
+                                <i class="fa fa-sign-out"></i><span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <div class="container-fluid">
+
+                <!-- Panel 1 -->
+                <div class="panel-content" style="padding-bottom: 18px">
+                    <p class="text-muted">Lihat data berdasarkan tanggal :</p>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <!-- Date Picker -->
+                        <div style="display: flex; gap: 4px; align-items: center;">
+                            <div class="input-daterange input-group" data-provide="datepicker">
+                                <input type="text" class="input-sm form-control" name="date-start"
+                                    style="background: white; cursor: pointer;" readonly>
+                            </div>
+                            <p class="text-muted">_</p>
+                            <div class="input-daterange input-group" data-provide="datepicker">
+                                <input type="text" class="input-sm form-control" name="date-end"
+                                    style="background: white; cursor: pointer;" readonly>
+                            </div>
+                            <a class="btn btn-primary" style="padding: 4px 8px;">
+                                <i class="fa fa-book"></i> Expor Data
+                            </a>
+                        </div>
+
+                        <!-- Tambah Data Pengeluaran -->
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#modal-box-tambah-data-pengeluaran"
+                            style="padding: 4px 8px;">
+                            <i class="fa fa-plus"></i> Tambah Data
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Modal Box Tambah Data Pengeluaran -->
+                <div id="modal-box-tambah-data-pengeluaran" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+
+                            <!-- Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h5 class="modal-title" id="myModalLabel">Formulir Pengeluaran</h5>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="modal-body">
+
+                                <!-- Tanggal -->
+                                <div class="form-group">
+                                    <div class="input-group date" data-date-autoclose="true" data-provide="datepicker">
+                                        <input type="text" class="form-control" placeholder="Tanggal">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Keterangan -->
+                                <div class="form-group">
+                                    <textarea class="form-control" autocomplete="off" placeholder="Keterangan" rows="4"
+                                        style="resize: vertical;"></textarea>
+                                </div>
+
+                                <!-- Kuantitas -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="Kuantitas">
+                                </div>
+
+                                <!-- Nominal -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="Nominal">
+                                </div>
+
+                                <button type="button" class="btn btn-primary" style="padding: 4px 8px;">
+                                    <i class="fa fa-plus"></i> Tambah Data
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div class="panel-content" style="padding-bottom: 0;">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>#</th>
+                            <th>Tanggal</th>
+                            <th>Keterangan</th>
+                            <th>Kuantitas</th>
+                            <th>Nominal</th>
+                            <th colspan="2">Aksi</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>07/09/2023</td>
+                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                            <td>1 Domain</td>
+                            <td>Rp 500.000</td>
+                            <td colspan="2">
+                                <a class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal-box-tambah-data-pengeluaran"
+                                    style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-pencil"></i> Ubah
+                                </a>
+                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-trash"></i> Hapus
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>07/09/2023</td>
+                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                            <td>1 Domain</td>
+                            <td>Rp 500.000</td>
+                            <td colspan="2">
+                                <a class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal-box-tambah-data-pengeluaran"
+                                    style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-pencil"></i> Ubah
+                                </a>
+                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-trash"></i> Hapus
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>07/09/2023</td>
+                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                            <td>1 Domain</td>
+                            <td>Rp 500.000</td>
+                            <td colspan="2">
+                                <a class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal-box-tambah-data-pengeluaran"
+                                    style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-pencil"></i> Ubah
+                                </a>
+                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-trash"></i> Hapus
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>07/09/2023</td>
+                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                            <td>1 Domain</td>
+                            <td>Rp 500.000</td>
+                            <td colspan="2">
+                                <a class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal-box-tambah-data-pengeluaran"
+                                    style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-pencil"></i> Ubah
+                                </a>
+                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-trash"></i> Hapus
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>07/09/2023</td>
+                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
+                            <td>1 Domain</td>
+                            <td>Rp 500.000</td>
+                            <td colspan="2">
+                                <a class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modal-box-tambah-data-pengeluaran"
+                                    style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-pencil"></i> Ubah
+                                </a>
+                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-trash"></i> Hapus
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="panel-content">
+                    <ul class="pagination borderless">
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="clearfix"></div>
+        <footer>
+            <p class="copyright">
+                &copy; 2023.
+                <a href="https://smktibaliglobalsingaraja.sch.id/" target="_blank">SMK TI Bali Global Singaraja</a>.
+                All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/metisMenu/metisMenu.js"></script>
+    <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/scripts/common.js"></script>
+</body>
+
+</html>

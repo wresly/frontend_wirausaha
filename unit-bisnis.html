@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <!-- Title -->
-    <title>Master Data Pemasukan | LKUBS - SMK TI Bali Global Singaraja</title>
+    <title>Master Data Unit Bisnis | LKUBS - SMK TI Bali Global Singaraja</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
@@ -75,13 +75,13 @@
                                 <i class="fa fa-database"></i> <span>Master Data</span>
                             </a>
                             <ul aria-expanded="true">
-                                <li>
-                                    <a href="unit-bisnis.html">
+                                <li class="active">
+                                    <a href="#">
                                         <i class="fa fa-inbox"></i><span>Unit Bisnis</span>
                                     </a>
                                 </li>
-                                <li class="active">
-                                    <a href="#">
+                                <li>
+                                    <a href="pemasukan.html">
                                         <i class="fa fa-inbox"></i><span>Pemasukan</span>
                                     </a>
                                 </li>
@@ -108,56 +108,32 @@
         <div id="main-content">
             <div class="container-fluid">
 
-                <!-- Panel 1 -->
-                <div class="panel-content" style="padding-bottom: 18px">
-                    <p class="text-muted">Lihat data berdasarkan tanggal :</p>
-                    <div style="display: flex; justify-content: space-between;">
-
-                        <!-- Date Picker -->
-                        <div style="display: flex; gap: 4px; align-items: center;">
-                            <div class="input-daterange input-group" data-provide="datepicker">
-                                <input type="text" class="input-sm form-control" name="date-start"
-                                    style="background: white; cursor: pointer;" readonly>
-                            </div>
-                            <p class="text-muted">_</p>
-                            <div class="input-daterange input-group" data-provide="datepicker">
-                                <input type="text" class="input-sm form-control" name="date-end"
-                                    style="background: white; cursor: pointer;" readonly>
-                            </div>
-                            <a class="btn btn-primary" style="padding: 4px 8px;">
-                                <i class="fa fa-book"></i> Expor Data
-                            </a>
-                        </div>
-
-                        <!-- Tambah Data Pemasukan -->
-                        <a class="btn btn-primary" data-toggle="modal" data-target="#modal-box-tambah-data-pemasukan"
-                            style="padding: 4px 8px;">
-                            <i class="fa fa-plus"></i> Tambah Data
-                        </a>
-
-                    </div>
+                <!-- Tambah Unit Bisnis -->
+                <div class="panel-content" style="padding-bottom: 18px; display: flex; justify-content: end;">
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#modal-box-tambah-unit-bisnis"
+                        style="padding: 4px 12px;">
+                        <i class="fa fa-plus"></i> Tambah Unit Bisnis
+                    </a>
                 </div>
 
-                <!-- Modal Box Tambah Data Pemasukan -->
-                <div id="modal-box-tambah-data-pemasukan" class="modal fade" tabindex="-1" role="dialog">
+                <!-- Modal Box Tambah Unit Bisnis -->
+                <div id="modal-box-tambah-unit-bisnis" class="modal fade" tabindex="-1" role="dialog">
                     <div class="modal-dialog modal-sm" role="document">
                         <div class="modal-content">
 
                             <!-- Header -->
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h5 class="modal-title" id="myModalLabel">Formulir Pemasukan</h5>
+                                <h5 class="modal-title" id="myModalLabel">Formulir Unit Bisnis</h5>
                             </div>
 
                             <!-- Body -->
                             <div class="modal-body">
 
-                                <!-- Tanggal -->
+                                <!-- Nama Unit Bisnis -->
                                 <div class="form-group">
-                                    <div class="input-group date" data-date-autoclose="true" data-provide="datepicker">
-                                        <input type="text" class="form-control" placeholder="Tanggal">
-                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                    </div>
+                                    <input type="text" class="form-control" autocomplete="off"
+                                        placeholder="Nama Unit Bisnis">
                                 </div>
 
                                 <!-- Keterangan -->
@@ -166,17 +142,18 @@
                                         style="resize: vertical;"></textarea>
                                 </div>
 
-                                <!-- Kuantitas -->
+                                <!-- Username -->
                                 <div class="form-group">
-                                    <input type="text" class="form-control" autocomplete="off" placeholder="Kuantitas">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="Username">
                                 </div>
 
-                                <!-- Nominal -->
+                                <!-- Password -->
                                 <div class="form-group">
-                                    <input type="text" class="form-control" autocomplete="off" placeholder="Nominal">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="Password">
                                 </div>
 
-                                <button type="button" class="btn btn-primary" style="padding: 4px 8px;">
+                                <!-- Submit Button -->
+                                <button type="button" class="btn btn-primary" style="padding: 4px 12px;">
                                     <i class="fa fa-plus"></i> Tambah Data
                                 </button>
 
@@ -191,94 +168,63 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>#</th>
-                            <th>Tanggal</th>
+                            <th>Unit Bisnis</th>
                             <th>Keterangan</th>
-                            <th>Kuantitas</th>
-                            <th>Nominal</th>
-                            <th colspan="2">Aksi</th>
+                            <th>Username</th>
+                            <th>Aksi</th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>07/09/2023</td>
-                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
-                            <td>1 Domain</td>
-                            <td>Rp 500.000</td>
-                            <td colspan="2">
-                                <a class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modal-box-tambah-data-pemasukan"
-                                    style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-pencil"></i> Ubah
-                                </a>
-                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-trash"></i> Hapus
+                            <td>Kursus Scratch</td>
+                            <td>Layanan kursus Scratch 3.0 untuk anak-anak.</td>
+                            <td>admin_scratch</td>
+                            <td>
+                                <a href="#" class="btn btn-primary" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-sign-in"></i> Masuk
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>07/09/2023</td>
-                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
-                            <td>1 Domain</td>
-                            <td>Rp 500.000</td>
-                            <td colspan="2">
-                                <a class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modal-box-tambah-data-pemasukan"
-                                    style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-pencil"></i> Ubah
-                                </a>
-                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-trash"></i> Hapus
+                            <td>Kursus Scratch</td>
+                            <td>Layanan kursus Scratch 3.0 untuk anak-anak.</td>
+                            <td>admin_scratch</td>
+                            <td>
+                                <a href="#" class="btn btn-primary" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-sign-in"></i> Masuk
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>07/09/2023</td>
-                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
-                            <td>1 Domain</td>
-                            <td>Rp 500.000</td>
-                            <td colspan="2">
-                                <a class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modal-box-tambah-data-pemasukan"
-                                    style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-pencil"></i> Ubah
-                                </a>
-                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-trash"></i> Hapus
+                            <td>Kursus Scratch</td>
+                            <td>Layanan kursus Scratch 3.0 untuk anak-anak.</td>
+                            <td>admin_scratch</td>
+                            <td>
+                                <a href="#" class="btn btn-primary" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-sign-in"></i> Masuk
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>07/09/2023</td>
-                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
-                            <td>1 Domain</td>
-                            <td>Rp 500.000</td>
-                            <td colspan="2">
-                                <a class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modal-box-tambah-data-pemasukan"
-                                    style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-pencil"></i> Ubah
-                                </a>
-                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-trash"></i> Hapus
+                            <td>Kursus Scratch</td>
+                            <td>Layanan kursus Scratch 3.0 untuk anak-anak.</td>
+                            <td>admin_scratch</td>
+                            <td>
+                                <a href="#" class="btn btn-primary" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-sign-in"></i> Masuk
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>07/09/2023</td>
-                            <td>Membeli domain untuk Lorem ipsum dolor sit amet.</td>
-                            <td>1 Domain</td>
-                            <td>Rp 500.000</td>
-                            <td colspan="2">
-                                <a class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modal-box-tambah-data-pemasukan"
-                                    style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-pencil"></i> Ubah
-                                </a>
-                                <a class="btn btn-danger" style="padding: 4px 8px; font-size: 12px;">
-                                    <i class="fa fa-trash"></i> Hapus
+                            <td>Kursus Scratch</td>
+                            <td>Layanan kursus Scratch 3.0 untuk anak-anak.</td>
+                            <td>admin_scratch</td>
+                            <td>
+                                <a href="#" class="btn btn-primary" style="padding: 4px 8px; font-size: 12px;">
+                                    <i class="fa fa-sign-in"></i> Masuk
                                 </a>
                             </td>
                         </tr>
@@ -316,7 +262,6 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/metisMenu/metisMenu.js"></script>
     <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/scripts/common.js"></script>
 </body>
 
